@@ -46,4 +46,13 @@
 .flight {
     border: 1px solid black;
     background-color: lightgray;
+
+
+}
+
+.airports {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    padding: 5px;
 }
