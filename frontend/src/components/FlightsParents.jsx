@@ -21,7 +21,7 @@ function FlightsParents(props){
             {flights.map(flight =>
                 (
                     <Flight
-                    key={flight["@uniqueID"]} arr={flight.airport} dep={props.airport} gate={flight.gate} flightnumber={flight.flight_id} date={flight.schedule_time.slice(0,16)} {...flight}
+                    key={flight["@uniqueID"]} keyID={flight["@uniqueID"]} arr={flight.airport} dep={props.airport} gate={flight.gate} flightnumber={flight.flight_id} date={flight.schedule_time.slice(0,16)} {...flight}
                 />
             ))}
         </div>

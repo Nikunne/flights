@@ -44,15 +44,24 @@
 */
 
 .flight {
+    display: flex;
+    flex-direction: column;
     border: 1px solid black;
     background-color: lightgray;
-
-
+    padding: 1vw;
 }
 
 .airports {
     display: flex;
     flex-direction: row;
+    gap: 3vw;
     margin-left: 10px;
+    margin-right: 10px;
     padding: 5px;
+    background-color: palevioletred;
+}
+
+.flight:hover {
+    background-color: darkgray;
+    cursor: pointer;
 }

@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import Flight from "./components/Flight.jsx";
 import FlightsParents from "./components/FlightsParents.jsx";
+import DropdownComponent from "./components/Dropdown.jsx";
 
 function App() {
 
