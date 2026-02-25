@@ -1,3 +1,8 @@
+# Flights-project
+
+This project will display flights from the Avinor API
+
+
 # Frontend
 
 Runs with
@@ -14,9 +19,7 @@ Frontend should be visible on
 
 # Backend 
 
-Can be started with going into backend folder and running after starting your venv
-If you need a new venv: (first time)
-
+Create venv: (only first time)
 ```bash
 cd backend
 python3 -m venv .venv
@@ -37,7 +40,9 @@ Backend should be visible on
 
 
 
-Debug:
+# Problems?
+
+
 Should both be in venv:
 >which pip
 
