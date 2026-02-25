@@ -5,7 +5,7 @@ import getFlights from "/src/api/flights.js"
 function FlightsParents(props){
     const [flights, setFlights] = useState([])
 
-    // Will be hardcoded for Oslo for now
+    //Will getflights from airport from the props, and then set the flights-constant array.
     useEffect(() => {
         getFlights(props.airport)
             .then(data => {

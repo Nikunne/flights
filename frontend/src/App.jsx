@@ -16,6 +16,11 @@ function App() {
             <Flight dep="Oslo" arr="Trondheim" date="dategoeshere2" flightnumber="DY132"/>
             <Flight dep="Oslo" arr="Alesund" date="dategoeshere4" flightnumber={"SK1312"}/>
             <p>Dynamic data</p>
+            <select>
+                <option value={"OSL"}>OSL</option>
+                <option value={"AES"}>AES</option>
+            </select>
+
             <div className={"airports"}>
                 <FlightsParents airport={"OSL"}>
 
@@ -23,7 +28,6 @@ function App() {
                 <FlightsParents airport={"AES"}>
 
                 </FlightsParents>
-                <FlightsParents airport={"TRD"}></FlightsParents>
             </div>
 
         </div>
