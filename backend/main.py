@@ -24,9 +24,9 @@ async def root():
 async def get_flights(airport: str):
     response = requests.get(f"https://asrv.avinor.no/XmlFeed/v1.0?TimeFrom=1&TimeTo=7&airport={airport}&direction=D&lastUpdate=2024-08-08T09:30:00Z")
     response_dict = xmltodict.parse(response.text)
-    result = json.dumps(response_dict, indent=4) #turns into json
-
-    jsonreader = json.loads(result)
-    flights = jsonreader['airport']['flights']['flight']
+    # result = json.dumps(response_dict, indent=4) #turns into json
+    #
+    # jsonreader = json.loads(result)
+    flights = response_dict['airport']['flights']['flight']
 
     return flights
