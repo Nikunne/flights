@@ -66,3 +66,14 @@
     background-color: darkgray;
     cursor: pointer;
 }
+
+select {
+    width: 100%;
+    text-align-last: center;
+    padding: 1vw;
+}
+
+option {
+    text-align-last: center;
+    text-align: center;
+}

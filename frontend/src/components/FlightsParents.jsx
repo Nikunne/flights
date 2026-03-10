@@ -13,7 +13,7 @@ function FlightsParents(props){
             })
             .catch(console.error)
         console.log("useeffect is runned")
-    }, [])
+    }, [props.airport])
 
     return (
         <div className={"flightPage"}>
