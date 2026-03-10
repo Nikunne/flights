@@ -2,7 +2,17 @@
 
 This project will display flights from the Avinor API
 
+#
 
+>docker compose up --build
+>docker compose down
+>docker compose up
+
+
+# LEGACY UNDER HERE
+
+
+ 
 # Frontend
 
 Runs with
