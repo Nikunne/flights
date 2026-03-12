@@ -38,7 +38,7 @@ async def get_flights(airport: str):
         #Code to find city name from airport code
         airport_name = airport
         airport_name = "Oslo"
-        baseURL += f"{airport_name}/flytider/flyinfo/?flightid={elem.get('flight_id')}-{airport}-{elem.get(arrival)}-"
+        baseURL += f"{airport_name}/flytider/flyinfo/?flightid={elem.get('flight_id')}-{airport}-{arrival}-"
         date = elem.get("schedule_time")
         dateTime = date[:16]
         date = date[:10]
