@@ -34,19 +34,31 @@ async def get_flights(airport: str):
     iata_airports = airportsdata.load('IATA')
     for elem in flights:
         baseURL = "https://www.avinor.no/flyplass/"
-
+        arrival = elem.get('airport')
         #Code to find city name from airport code
         airport_name = airport
-        airport_name = iata_airports[airport]['name'].split()[0]
-        airport_name = 'Oslo' # WORKS for now since avinor is lazy
-        baseURL += f"{airport_name}/flytider/flyinfo/?flightid={elem.get('flight_id')}-{airport}-{elem.get("airport")}-"
+        airport_name = "Oslo"
+        baseURL += f"{airport_name}/flytider/flyinfo/?flightid={elem.get('flight_id')}-{airport}-{elem.get(arrival)}-"
         date = elem.get("schedule_time")
+        dateTime = date[:16]
         date = date[:10]
+
+        clockTime = dateTime[-5:]
+
         f = date.split("-")
         date_link = ""
         for elems in f:
             date_link += elems
         baseURL += f"{date_link}"
         elem.update({"link": baseURL})
+        elem.update({"clockTime": clockTime})
+        elem.update({"dato": date})
+
+
+        dep_airport = iata_airports[airport]["name"].split()[0]
+        arr_airport = iata_airports[arrival]["name"].split()[0]
+
+        elem.update({"dep_name":dep_airport})
+        elem.update({"arr_name":arr_airport})
 
     return flights

@@ -89,3 +89,27 @@ option {
     text-decoration: none;
     color: black;
 }
+
+nav {
+    text-decoration: none;
+    color: black;
+    background-color: palevioletred;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    margin: 0vw;
+    background-color: green;
+}
+
+.nav-link2 {
+    text-decoration: none;
+    color: black;
+    margin: 1vw;
+}
+
+.nav-link:hover, .nav-link2:hover {
+    color: purple;
+    background-color: white;
+}

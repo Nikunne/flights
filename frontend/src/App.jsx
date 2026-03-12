@@ -5,6 +5,7 @@ import Flight from "./components/Flight.jsx";
 import FlightsParents from "./components/FlightsParents.jsx";
 import DropdownComponent from "./components/Dropdown.jsx";
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
+import Airports from "./pages/Airports.jsx";
 
 function Home() {
     return (<>
@@ -19,15 +20,21 @@ function App() {
     <>
         <BrowserRouter>
             <nav>
-                <Link to={"/"}>Home</Link>
-                <Link to={"/about"}>About</Link>
-                <Link to={"/contact"}>Contact</Link>
+                <Link className={"nav-link"} to={"/"}>Home</Link>
+                <Link className={"nav-link"} to={"/airports"}>Airports</Link>
+                <Link className={"nav-link"} to={"/contact"}>Contact</Link>
+            </nav>
+            <nav>
+                <Link className={"nav-link2"} to={"/airports/OSL"}>OSL</Link>
+                <Link className={"nav-link2"} to={"/airports/TRD"}>TRD</Link>
+                <Link className={"nav-link2"} to={"/airports/BGO"}>BGO</Link>
+                <Link className={"nav-link2"} to={"/airports/AES"}>AES</Link>
             </nav>
 
             <Routes>
                 <Route path={"/"} element={<Home/>}/>
-                <Route path={"/about"} element={<h1>About</h1>}/>
-                <Route path={"/contact"} element={<h1>Contact</h1>}/>
+                <Route path={"/airports"} element={<h3>Here will come som airport stuff</h3>}/>
+                <Route path={"/airports/:airport"} element={<Airports/>}/>
             </Routes>
 
             <div>
@@ -35,6 +42,9 @@ function App() {
                 <h1>The react template is no more</h1>
                 <p>The links currently works for non Oslo-airport due to Avinor Laziness</p>
                 <p>Dynamic data</p>
+
+                <Link to={"/airports/OSL"}>OSL</Link>
+
 
                 <select onChange={(e) => setAirport(e.target.value)}>
                     <option value={"OSL"}>OSL</option>
