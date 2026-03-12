@@ -31,11 +31,9 @@ function App() {
             </Routes>
 
             <div>
+                <p>--------Router things stops here-----</p>
                 <h1>The react template is no more</h1>
-                <p>Static data</p>
-                <Flight dep="Mumbai" arr="Delhi" date="dategoeshere"/>
-                <Flight dep="Oslo" arr="Trondheim" date="dategoeshere2" flightnumber="DY132"/>
-                <Flight dep="Oslo" arr="Alesund" date="dategoeshere4" flightnumber={"SK1312"}/>
+                <p>The links currently works for non Oslo-airport due to Avinor Laziness</p>
                 <p>Dynamic data</p>
 
                 <select onChange={(e) => setAirport(e.target.value)}>

@@ -2,6 +2,8 @@
 
 This project will display flights from the Avinor API
 
+# USING DOCKER
+
 #
 First time:
 >docker compose up --build
@@ -15,7 +17,7 @@ Project should be visible on
 >localhost:5173
 
 
-# LEGACY UNDER HERE
+# WITHOUT DOCKER
 
 # Frontend
 

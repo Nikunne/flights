@@ -10,9 +10,11 @@ function FlightsParents(props){
         getFlights(props.airport)
             .then(data => {
                 setFlights(data)
+                console.log(data)
             })
             .catch(console.error)
         console.log("useeffect is runned")
+
     }, [props.airport])
 
     return (
@@ -21,6 +23,7 @@ function FlightsParents(props){
             {flights.map(flight =>
                 (
                     <Flight
+                        Link={flight.link}
                     key={flight["@uniqueID"]} keyID={flight["@uniqueID"]} arr={flight.airport} dep={props.airport} gate={flight.gate} flightnumber={flight.flight_id} date={flight.schedule_time.slice(0,16)} {...flight}
                 />
             ))}
