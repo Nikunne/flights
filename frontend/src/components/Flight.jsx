@@ -9,6 +9,7 @@ function Flight({date="defaultdate", ...rest}){
                 <p>Departing from {rest.dep} to {rest.arr} at <strong>{rest.clockTime}</strong> (GMT) from gate {rest.gate}</p>
                 <p>{rest.dato}</p>
                 <p>Unique debugging ID: {rest.keyID}</p>
+                <p>{rest.airline}</p>
 
             </div>
         </a>

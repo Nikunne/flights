@@ -54,6 +54,9 @@ fastapi dev main.py
 Backend should be visible on
 >localhost:8000
 
+# Development
+
+Airline images are stored in public/airlines
 
 
 # Problems?
