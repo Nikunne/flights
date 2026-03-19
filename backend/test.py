@@ -3,7 +3,7 @@ import requests
 import xmltodict
 import airportsdata
 
-airport="TRD"
+airport="OSL"
 response = requests.get(f"https://asrv.avinor.no/XmlFeed/v1.0?TimeFrom=1&TimeTo=7&airport={airport}&direction=D&lastUpdate=2024-08-08T09:30:00Z")
 response_dict = xmltodict.parse(response.text)
 
@@ -31,8 +31,6 @@ for elem in flights:
     elem.update({"link": baseURL})
     elem.update({"clockTime": clockTime})
     elem.update({"date": date})
-
-    elem.update
 
 def convert_XXX_to_city(str):
     return 0

@@ -75,6 +75,11 @@
     cursor: pointer;
 }
 
+.flight_picture {
+    width: 20%;
+    height: 20%;
+}
+
 
 
 select {
