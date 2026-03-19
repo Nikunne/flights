@@ -10,10 +10,8 @@ function FlightsParents(props){
         getFlights(props.airport)
             .then(data => {
                 setFlights(data)
-                console.log(data)
             })
             .catch(console.error)
-        console.log("useeffect is runned")
 
     }, [props.airport])
 
