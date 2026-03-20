@@ -20,15 +20,18 @@ function App() {
     <>
         <BrowserRouter>
             <nav>
-                <Link className={"nav-link"} to={"/"}>Home</Link>
-                <Link className={"nav-link"} to={"/airports"}>Airports</Link>
-                <Link className={"nav-link"} to={"/contact"}>Contact</Link>
-            </nav>
-            <nav>
-                <Link className={"nav-link2"} to={"/airports/OSL"}>OSL</Link>
-                <Link className={"nav-link2"} to={"/airports/TRD"}>TRD</Link>
-                <Link className={"nav-link2"} to={"/airports/BGO"}>BGO</Link>
-                <Link className={"nav-link2"} to={"/airports/AES"}>AES</Link>
+                <div className={"nav-left"}>
+                    <Link className={"nav-link"} to={"/"}>Home</Link>
+                    <Link className={"nav-link"} to={"/airports"}>Airports</Link>
+                    <Link className={"nav-link"} to={"/contact"}>Contact</Link>
+                </div>
+                <div className={"nav-right"}>
+                    <p>Common airports:</p>
+                    <Link className={"nav-link2"} to={"/airports/OSL"}>OSL</Link>
+                    <Link className={"nav-link2"} to={"/airports/TRD"}>TRD</Link>
+                    <Link className={"nav-link2"} to={"/airports/BGO"}>BGO</Link>
+                    <Link className={"nav-link2"} to={"/airports/AES"}>AES</Link>
+                </div>
             </nav>
 
             <Routes>
@@ -56,7 +59,7 @@ function App() {
                 </select>
 
 
-                <div className={"airports"}>
+                <div className={"bottom-demo-airports"}>
 {/*                    <FlightsParents airport={"OSL"}>
 
                     </FlightsParents>

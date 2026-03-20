@@ -59,7 +59,7 @@
     margin: 2px;
 }
 
-.airports {
+.bottom-demo-airports {
     display: flex;
     flex-direction: row;
     gap: 3vw;
@@ -103,23 +103,45 @@ option {
     color: black;
 }
 
+.flights-inpage {
+    max-height: 40vw;
+    overflow-y: auto;
+    background-color: purple;
+    flex: 1;
+}
+
 nav {
     text-decoration: none;
     color: black;
     background-color: palevioletred;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-right {
+    display: flex;
+    padding-right: 7vw;
+}
+
+.nav-left {
+    display: flex;
+    padding-left: 7vw;
+}
+
+.nav-right p {
+    margin: 0.2vw;
 }
 
 .nav-link {
     text-decoration: none;
     color: black;
-    margin: 0vw;
-    background-color: green;
+    padding: 0.2vw 1vw;
 }
 
 .nav-link2 {
     text-decoration: none;
     color: black;
-    margin: 1vw;
+    padding: 0.2vw 1vw;
 }
 
 .nav-link:hover, .nav-link2:hover {

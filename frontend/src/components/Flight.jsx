@@ -2,7 +2,6 @@ function Flight({date="defaultdate", ...rest}){
     return (
         <a href={rest.link} className={"flight"}>
             <div>
-
                 <h2>Flightnumber {rest.flightnumber} </h2>
                 <img className={"flight_picture"} src={`/airlines/${rest.airline}.png`} alt={`image for ${rest.airline} missing`}/>
                 <p>{rest.dep_name} - {rest.arr_name}</p>
